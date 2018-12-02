@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Nunito+Sans" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Raleway:800" rel="stylesheet">
+    
+
+    <title>The Laptop Store!</title>
+
+    <style>
+        *{
+            font-family :"Raleway";
+            margin:0;
+            box-sizing: border-box;
+            padding:0;
+        }
+     
+        
+
+        body{
+            height: 300vh;
+            background:linear-gradient( to bottom, rgb(0, 204, 255), rgb(0, 100, 105) );
+            background-repeat : no-repeat;
+            background-size: cover;
+            
+        }
+
+        h1{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border:.18em solid white;
+            width:50vw;
+            text-align:center;
+            margin-top : 5vh;
+            color:white;
+            transform:skewy(-3deg);
+            font-size: 3em;
+            margin-bottom:10vh;
+        
+        }
+        h1::before{
+            content:"THE";
+            display:block;
+            font-size: 40%;
+        }
+
+
+        .cards-container{
+            margin:1vw;
+            display:grid;
+            grid-template-columns: repeat(3, 30vw);
+            grid-gap:2em;
+        }
+        .card{
+            background:white;
+            box-shadow: 0 3rem 6rem 1rem rgba(0, 0, 0, 0.25);
+            
+            border-radius:0.5em;
+            position:relative;
+        }
+        
+        .card__img{
+            display:block;
+            width:100%;
+            border-radius: 0.2em;
+ 
+        }
+
+        
+        
+        .card__name{
+            display:block;
+            background: linear-gradient(to right bottom, rgb(255, 95, 95), rgb(255, 26, 76) );
+            padding:1.3rem 0.8rem;
+            width:100%;
+            text-align: center;
+            color:white;
+
+        }
+
+        .card__detail{
+            display:block;
+            color:rgb(255, 26, 76);
+            padding:1rem;
+            text-align:center;
+        }
+
+        .card__price{
+            
+            flex: 0 0 50%;
+            background-color: #eee;
+            border-top: 1px solid #e1e1e1;
+            padding: 1.25rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+
+        }
+        .card__link:link,
+        .card__link:visited {
+            flex: 0 0 50%;
+            background-color: #5aaa9d;
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.25rem 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+        }
+        .card__link:hover{
+            
+            background-color:lightslategray;
+        }
+        .emoji-left {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        .emoji-right {
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+            
+            
+        
+      
+
+
+
+    </style>
+
+</head>
+   
+<body>
+    <div class = "container">
+        <h1>LAPTOP STORE!</h1>
+        <div class = "cards-container">
+            {%CARDS%}
+        </div>
+    </div>
+    
+
+
+</body>    
+</html>
